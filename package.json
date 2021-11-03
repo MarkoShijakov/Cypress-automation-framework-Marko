@@ -38,7 +38,8 @@
     "mochawesome-merge": "npx mochawesome-merge cypress/results/mochawesome/*.json > mochawesome.json && npx marge mochawesome.json",
     "delete-mochawesome-report": "rm -rf mochawesome-report/* || true",
     "cypress-regression-pack": "npm run delete-results && npm run delete-mochawesome-report && npm run triggerAllTests-headless && npm run mochawesome-merge",
-    "regressionMoj": "npm run delete-results && npm run delete-mochawesome-report && npm run testoviZaProbu && npm run mochawesome-merge"
+    "regressionMoj": "npm run delete-results && npm run delete-mochawesome-report && npm run testoviZaProbu && npm run mochawesome-merge",
+    "lokal-i-dashboard-test": "npx cypress run --spec cypress/integration/zaPokretanje/* --record --key 0bddb7aa-f788-4273-b51d-4e492329c575"
   },
   "dependencies": {
     "@agm/core": "^1.1.0",
