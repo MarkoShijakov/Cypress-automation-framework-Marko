@@ -1,0 +1,337 @@
+{
+  "stats": {
+    "suites": 3,
+    "tests": 9,
+    "passes": 9,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-11-02T08:53:24.917Z",
+    "end": "2021-11-02T08:53:45.550Z",
+    "duration": 9909,
+    "testsRegistered": 9,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "15521045-9dc8-4b39-8ba3-ff4c42675b7c",
+      "title": "",
+      "fullFile": "cypress/integration/zaPokretanje/checkbox.js",
+      "file": "cypress/integration/zaPokretanje/checkbox.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6af52e25-5cdf-499c-bdd1-382e45806d95",
+          "title": "Verify checkboxes via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check and validate checkbox",
+              "fullTitle": "Verify checkboxes via webdriveruni Check and validate checkbox",
+              "timedOut": null,
+              "duration": 1776,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com\");\ncy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({\n  force: true\n}); //cy.get('#checkboxes > :nth-child(1) > input').check()\n//cy.get('#checkboxes > :nth-child(1) > input').check().should('be.checked')\ncy.get('#checkboxes > :nth-child(1) > input').as('option-1'); //cy.get('@option-1').check();\ncy.get('@option-1').check().should('be.checked');",
+              "err": {},
+              "uuid": "256b1ba1-0d1d-49b9-bafa-215072d426ed",
+              "parentUUID": "6af52e25-5cdf-499c-bdd1-382e45806d95",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Uncheck and validate checkbox",
+              "fullTitle": "Verify checkboxes via webdriveruni Uncheck and validate checkbox",
+              "timedOut": null,
+              "duration": 621,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com\");\ncy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get(':nth-child(5) > input').as('option-3');\ncy.get('@option-3').uncheck().should('not.be.checked');",
+              "err": {},
+              "uuid": "14ef3ff0-0674-4e9a-9d41-1a2279ef1893",
+              "parentUUID": "6af52e25-5cdf-499c-bdd1-382e45806d95",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check multiple checkboxes",
+              "fullTitle": "Verify checkboxes via webdriveruni Check multiple checkboxes",
+              "timedOut": null,
+              "duration": 789,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com\");\ncy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get(\"input[type='checkbox']\").check([\"option-1\", \"option-2\", \"option-3\", \"option-4\"]).should('be.checked');",
+              "err": {},
+              "uuid": "fa697a04-a0f0-40b4-acb4-d740ef06fec4",
+              "parentUUID": "6af52e25-5cdf-499c-bdd1-382e45806d95",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "256b1ba1-0d1d-49b9-bafa-215072d426ed",
+            "14ef3ff0-0674-4e9a-9d41-1a2279ef1893",
+            "fa697a04-a0f0-40b4-acb4-d740ef06fec4"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3186,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "6458907c-9b8e-4ccb-92f4-e4644b080d64",
+      "title": "",
+      "fullFile": "cypress/integration/zaPokretanje/radioButton.js",
+      "file": "cypress/integration/zaPokretanje/radioButton.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b1cf8dc4-a8e3-4ed0-bfd2-a9c80516ee7b",
+          "title": "Verify radio buttons via webdriveruni",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Check specific radio buttons",
+              "fullTitle": "Verify radio buttons via webdriveruni Check specific radio buttons",
+              "timedOut": null,
+              "duration": 1934,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com\");\ncy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get('#radio-buttons').find(\"[type='radio']\").first().check();\ncy.get('#radio-buttons').find(\"[type='radio']\").eq(1).check();",
+              "err": {},
+              "uuid": "a59102f3-1e9b-4909-9269-a4d927ac58ce",
+              "parentUUID": "b1cf8dc4-a8e3-4ed0-bfd2-a9c80516ee7b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate the states of specific radio buttons",
+              "fullTitle": "Verify radio buttons via webdriveruni Validate the states of specific radio buttons",
+              "timedOut": null,
+              "duration": 780,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit(\"http://www.webdriveruniversity.com\");\ncy.get('#dropdown-checkboxes-radiobuttons').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get(\"[value='lettuce']\").should('not.be.checked');\ncy.get(\"[value='pumpkin']\").should('be.checked');\ncy.get(\"[value='lettuce']\").check();\ncy.get(\"[value='lettuce']\").should('be.checked');\ncy.get(\"[value='pumpkin']\").should('not.be.checked'); //  ==>>> Namerno greska napravljena (treba da bude = 'not.be.checked')\ncy.get(\"[value='cabbage']\").should('be.disabled');",
+              "err": {},
+              "uuid": "03a57d8c-05b9-4325-b899-e0db7f39e440",
+              "parentUUID": "b1cf8dc4-a8e3-4ed0-bfd2-a9c80516ee7b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a59102f3-1e9b-4909-9269-a4d927ac58ce",
+            "03a57d8c-05b9-4325-b899-e0db7f39e440"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2714,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "17149517-e02f-45c1-8b4d-786a60fcd4ec",
+      "title": "",
+      "fullFile": "cypress/integration/zaPokretanje/alerts.js",
+      "file": "cypress/integration/zaPokretanje/alerts.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "01558b65-cc37-436e-b655-72e9ea6c1a31",
+          "title": "Handle js alerts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Confirm js alert contains the correct text",
+              "fullTitle": "Handle js alerts Confirm js alert contains the correct text",
+              "timedOut": null,
+              "duration": 2043,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit(\"http://www.webdriveruniversity.com/Contact-Us/contactus.html\");\ncy.visit(\"http://www.webdriveruniversity.com\");\ncy.get('#popup-alerts').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get('#button1').click();\ncy.on('window:alert', function (str) {\n  expect(str).to.equal('I am an alert box!');\n});",
+              "err": {},
+              "uuid": "6a206806-cad8-4d9f-81c0-593abd471d15",
+              "parentUUID": "01558b65-cc37-436e-b655-72e9ea6c1a31",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate js confirm alert box works correctly when clicking ok",
+              "fullTitle": "Handle js alerts Validate js confirm alert box works correctly when clicking ok",
+              "timedOut": null,
+              "duration": 710,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit(\"http://www.webdriveruniversity.com/Contact-Us/contactus.html\");\ncy.visit(\"http://www.webdriveruniversity.com\");\ncy.get('#popup-alerts').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get('#button4').click();\ncy.on('window:confirm', function (str) {\n  return true;\n});\ncy.get('#confirm-alert-text').contains('You pressed OK!');",
+              "err": {},
+              "uuid": "25e9d00c-2753-4526-b699-c096023c615e",
+              "parentUUID": "01558b65-cc37-436e-b655-72e9ea6c1a31",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate js confirm alert box works correctly when clicking cancel",
+              "fullTitle": "Handle js alerts Validate js confirm alert box works correctly when clicking cancel",
+              "timedOut": null,
+              "duration": 642,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit(\"http://www.webdriveruniversity.com/Contact-Us/contactus.html\");\ncy.visit(\"http://www.webdriveruniversity.com\");\ncy.get('#popup-alerts').invoke('removeAttr', 'target').click({\n  force: true\n});\ncy.get('#button4').click();\ncy.on('window:confirm', function (str) {\n  return false;\n});\ncy.get('#confirm-alert-text').contains('You pressed Cancel!');",
+              "err": {},
+              "uuid": "dff009ea-0e0b-488d-8ede-82c2ef390b75",
+              "parentUUID": "01558b65-cc37-436e-b655-72e9ea6c1a31",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate js confirm alert box using a stub",
+              "fullTitle": "Handle js alerts Validate js confirm alert box using a stub",
+              "timedOut": null,
+              "duration": 614,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//cy.visit(\"http://www.webdriveruniversity.com/Contact-Us/contactus.html\");\ncy.visit(\"http://www.webdriveruniversity.com\");\ncy.get('#popup-alerts').invoke('removeAttr', 'target').click({\n  force: true\n});\nvar stub = cy.stub();\ncy.on('window:confirm', stub);\ncy.get('#button4').click().then(function () {\n  expect(stub.getCall(0)).to.be.calledWith('Press a button!');\n}).then(function () {\n  return true;\n}).then(function () {\n  cy.get('#confirm-alert-text').contains('You pressed OK!');\n});",
+              "err": {},
+              "uuid": "d153f351-955a-4ae8-9068-2501450f3bbe",
+              "parentUUID": "01558b65-cc37-436e-b655-72e9ea6c1a31",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6a206806-cad8-4d9f-81c0-593abd471d15",
+            "25e9d00c-2753-4526-b699-c096023c615e",
+            "dff009ea-0e0b-488d-8ede-82c2ef390b75",
+            "d153f351-955a-4ae8-9068-2501450f3bbe"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 4009,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.3.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "cypress/results/mochawesome",
+        "quite": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
