@@ -24,11 +24,9 @@ Cypress.on('uncaught:exception', (err, runnable) => {
     return false
   })
 
-  // Cypress.Server.defaults({
-  //   whitelist: (xhr) => {
-  //       return true;
-  //   }
-  // })
+  Cypress.Server.defaults({   //Nece prikazati one xhr podatke u verziji 5
+    ignore: xhr => true
+  })
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
