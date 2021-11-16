@@ -12,7 +12,8 @@ describe("Verify Autocomplete dropwdown lists via webdriveruni", () => {
             const productToSelect = 'Avacado';
 
             if(prod === productToSelect) {
-                $el.click();
+                // $el.click();       //Stari nacin
+                $el.triger("click");        //Ovako se sada koristi
 
                 cy.get('#submit-button').click();
                 cy.url().should('include', productToSelect)
@@ -25,7 +26,8 @@ describe("Verify Autocomplete dropwdown lists via webdriveruni", () => {
                 const productToSelect = 'Grapes';
     
                 if(prod === productToSelect) {
-                    $el.click();
+                    // $el.click();         //Stari nacin
+                    $el.triger("click");        //Ovako se sada koristi
     
                     cy.get('#submit-button').click();
                     cy.url().should('include', productToSelect)
