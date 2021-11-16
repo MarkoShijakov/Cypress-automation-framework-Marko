@@ -28,3 +28,7 @@ Feature: WebdriverUniversity Login Page
             | webdriver | webdriver123 | validation succeeded |
             | webdriver | webdriver555 | validation failed    |
             | joe       | pass123      | validation failed    |
+            | marko     | webdriver555 | validation failed    |
+            | proba     | pass123      | validation failed    |
+            | proba2    | webdriver555 | validation failed    |
+            | Marko2    | pass123      | validation failed    |
