@@ -1,10 +1,10 @@
 import { Before, Given, When, And, Then } from "cypress-cucumber-preprocessor/steps";
 
-let stub;
+let stub;       //ZA ALERT
 
-Before(() => {
+Before(() => {      //Cucumber hook
     cy.log("Executing before step");
-    stub = cy.stub();
+    stub = cy.stub();       //Inicijalizacija 'stub-a'
 })
 
 
@@ -21,13 +21,13 @@ And("I enter a password {word}", (userName) =>{
 })
 
 And('I click on the login button', () => {
-    cy.get("#login-button").click();
-    cy.on('window:alert', stub);
+    cy.get("#login-button").click();        //Izlazi alert pop-up
+    cy.on('window:alert', stub);            //STUB hvata poruku koja izlazi
 })
 
 Then('I should be presented with the following message {word} {word}', (message, message2) => {
-    const expectedMessage = message + " " + message2;
+    const expectedMessage = message + " " + message2;   
     cy.log(expectedMessage);
-    cy.log(stub.getCall(0));
-    expect(stub.getCall(0)).to.be.calledWith(expectedMessage);
+    cy.log(stub.getCall(0));        //
+    expect(stub.getCall(0)).to.be.calledWith(expectedMessage);  //Ocekuje da u 'stub-u' ima trazenu poruku
 })

@@ -15,8 +15,10 @@ Feature: WebdriverUniversity Login Page
         And I click on the login button
         Then I should be presented with the following message validation failed
 
+    # Prva dva scenarija mogu i da se obrisu jer se nalaze u trecem (u prva dva prolaza)
+
     @login
-    Scenario Outline: Test Login via WebdriverUniversity Login Portal
+    Scenario Outline: Test Login by multiple examples
         Given I access Login Portal page
         When I enter a username <username>
         And I enter a password <password>
@@ -32,3 +34,4 @@ Feature: WebdriverUniversity Login Page
             | proba     | pass123      | validation failed    |
             | proba2    | webdriver555 | validation failed    |
             | Marko2    | pass123      | validation failed    |
+
