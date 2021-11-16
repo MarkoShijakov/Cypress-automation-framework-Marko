@@ -8,7 +8,7 @@ Before(() => {
 })
 
 
-Given('I access the WebdriverUniversity Login Portal page', () => {
+Given('I access Login Portal page', () => {
     cy.visit("http://www.webdriveruniversity.com/Login-Portal/index.html");
 })
 
